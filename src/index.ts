@@ -1,13 +1,16 @@
 import fs from "fs";
 
-import { Drug } from "./components/Drug";
-import { Pharmacy } from "./components/Pharmacy";
+import { Drug } from "./class/Drug";
+import { Pharmacy } from "./class/Pharmacy";
+import { HERBAL_TEA_NAME } from "./drugs/herbalTea";
+import { FERVEX_NAME } from "./drugs/fervex";
+import { MAGIC_PILL_NAME } from "./drugs/magicPill";
 
 const drugs = [
 	new Drug("Doliprane", 20, 30),
-	new Drug("Herbal Tea", 10, 5),
-	new Drug("Fervex", 12, 35),
-	new Drug("Magic Pill", 15, 40),
+	new Drug(HERBAL_TEA_NAME, 10, 5),
+	new Drug(FERVEX_NAME, 12, 35),
+	new Drug(MAGIC_PILL_NAME, 15, 40),
 ];
 const pharmacy = new Pharmacy(drugs);
 

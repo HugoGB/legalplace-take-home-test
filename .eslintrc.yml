@@ -7,4 +7,5 @@ extends:
     - eslint:recommended
     - plugin:prettier/recommended
 rules:
+    no-undef: off
     no-unused-vars: off
