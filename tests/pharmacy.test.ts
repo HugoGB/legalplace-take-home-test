@@ -1,6 +1,10 @@
 import { Drug } from "../src/class/Drug";
 import { Pharmacy } from "../src/class/Pharmacy";
 import expectedOutput from "../output.json";
+import { DAFALGAN_NAME } from "../src/drugs/dafalgan";
+import { FERVEX_NAME } from "../src/drugs/fervex";
+import { HERBAL_TEA_NAME } from "../src/drugs/herbalTea";
+import { MAGIC_PILL_NAME } from "../src/drugs/magicPill";
 
 const updateDrug = (drug: Drug): Drug =>
 	new Pharmacy([drug]).updateBenefitValue()[0];
@@ -107,9 +111,10 @@ describe("Pharmacy", () => {
 	it("keeps the existing 30-day simulation unchanged", () => {
 		const pharmacy = new Pharmacy([
 			new Drug("Doliprane", 20, 30),
-			new Drug("Herbal Tea", 10, 5),
-			new Drug("Fervex", 12, 35),
-			new Drug("Magic Pill", 15, 40),
+			new Drug(HERBAL_TEA_NAME, 10, 5),
+			new Drug(FERVEX_NAME, 12, 35),
+			new Drug(MAGIC_PILL_NAME, 15, 40),
+			new Drug(DAFALGAN_NAME, 20, 30),
 		]);
 		const log: Drug[][] = [];
 

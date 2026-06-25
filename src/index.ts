@@ -2,8 +2,9 @@ import fs from "fs";
 
 import { Drug } from "./class/Drug";
 import { Pharmacy } from "./class/Pharmacy";
-import { HERBAL_TEA_NAME } from "./drugs/herbalTea";
+import { DAFALGAN_NAME } from "./drugs/dafalgan";
 import { FERVEX_NAME } from "./drugs/fervex";
+import { HERBAL_TEA_NAME } from "./drugs/herbalTea";
 import { MAGIC_PILL_NAME } from "./drugs/magicPill";
 
 const drugs = [
@@ -11,6 +12,7 @@ const drugs = [
 	new Drug(HERBAL_TEA_NAME, 10, 5),
 	new Drug(FERVEX_NAME, 12, 35),
 	new Drug(MAGIC_PILL_NAME, 15, 40),
+	new Drug(DAFALGAN_NAME, 20, 30),
 ];
 const pharmacy = new Pharmacy(drugs);
 
