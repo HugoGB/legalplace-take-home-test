@@ -1,7 +1,7 @@
+import fs from "fs";
+
 import { Drug } from "./components/Drug";
 import { Pharmacy } from "./components/Pharmacy";
-
-import fs from "fs";
 
 const drugs = [
 	new Drug("Doliprane", 20, 30),
@@ -11,15 +11,17 @@ const drugs = [
 ];
 const pharmacy = new Pharmacy(drugs);
 
-const log = [];
+const log: Drug[][] = [];
 
 for (let elapsedDays = 0; elapsedDays < 30; elapsedDays++) {
-	log.push(JSON.parse(JSON.stringify(pharmacy.updateBenefitValue())));
+	log.push(
+		JSON.parse(JSON.stringify(pharmacy.updateBenefitValue())) as Drug[],
+	);
 }
 
 fs.writeFile(
 	"output.json",
-	JSON.stringify({ result: log }, null, 2).concat("\n"),
+	JSON.stringify({ result: log }, null, "\t").concat("\n"),
 	(err) => {
 		if (err) {
 			console.log("error");

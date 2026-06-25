@@ -1,7 +1,10 @@
 env:
+    es6: true
     jest: true
     node: true
 parser: "@babel/eslint-parser"
 extends:
     - eslint:recommended
     - plugin:prettier/recommended
+rules:
+    no-unused-vars: off

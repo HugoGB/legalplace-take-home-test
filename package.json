@@ -4,11 +4,17 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"lint": "eslint .",
+		"lint": "eslint . --ext .js,.ts",
+		"typecheck": "tsc --noEmit",
 		"test": "jest",
-		"start": "babel-node src/index.js"
+		"start": "babel-node --extensions \".ts\" src/index.ts"
 	},
-	"devDependencies": {},
+	"devDependencies": {
+		"@babel/preset-typescript": "^7.24.1",
+		"@types/jest": "^29.5.12",
+		"@types/node": "^26.0.1",
+		"typescript": "^6.0.3"
+	},
 	"dependencies": {
 		"@babel/cli": "^7.24.1",
 		"@babel/core": "^7.24.4",

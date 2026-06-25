@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"target": "ES2021",
+		"module": "Node16",
+		"moduleResolution": "node16",
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"types": ["jest", "node"]
+	},
+	"include": ["src/**/*.ts", "tests/**/*.ts"]
+}
