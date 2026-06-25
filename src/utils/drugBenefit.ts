@@ -1,4 +1,4 @@
-import { Drug } from "../class/Drug";
+import type { Drug } from "../class/Drug";
 
 export const MIN_BENEFIT = 0;
 export const MAX_BENEFIT = 50;

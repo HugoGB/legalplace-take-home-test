@@ -1,11 +1,11 @@
-import { Drug } from "../class/Drug";
+import type { Drug } from "../class/Drug";
 
 import { DAFALGAN_NAME, updateDafalgan } from "../drugs/dafalgan";
 import { FERVEX_NAME, updateFervex } from "../drugs/fervex";
 import { HERBAL_TEA_NAME, updateHerbalTea } from "../drugs/herbalTea";
 import { MAGIC_PILL_NAME, updateMagicPill } from "../drugs/magicPill";
 import { updateStandardDrug } from "../drugs/standardDrug";
-import { DrugUpdater } from "../types/drugUpdater";
+import type { DrugUpdater } from "../types/drugUpdater";
 
 const updateRulesByDrugName = new Map<string, DrugUpdater>([
 	[HERBAL_TEA_NAME, updateHerbalTea],
