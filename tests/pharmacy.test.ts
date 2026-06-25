@@ -26,6 +26,26 @@ describe("Pharmacy", () => {
 		});
 	});
 
+	describe("Dafalgan", () => {
+		it("decreases benefit twice as fast as a standard drug", () => {
+			expect(updateDrug(new Drug("Dafalgan", 2, 10))).toEqual(
+				new Drug("Dafalgan", 1, 8),
+			);
+		});
+
+		it("decreases benefit twice as fast as an expired standard drug after expiration", () => {
+			expect(updateDrug(new Drug("Dafalgan", 0, 10))).toEqual(
+				new Drug("Dafalgan", -1, 6),
+			);
+		});
+
+		it("never has a negative benefit", () => {
+			expect(updateDrug(new Drug("Dafalgan", 0, 3))).toEqual(
+				new Drug("Dafalgan", -1, 0),
+			);
+		});
+	});
+
 	describe("Herbal Tea", () => {
 		it("increases benefit as it gets older", () => {
 			expect(updateDrug(new Drug("Herbal Tea", 2, 3))).toEqual(
